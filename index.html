@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的二次元世界</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/ai-chat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .custom-cursor {
+            width: 20px;
+            height: 20px;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: all 0.1s ease;
+            transform: translate(-50%, -50%);
+        }
+        .custom-cursor::before {
+            content: '❤';
+            font-size: 20px;
+            color: var(--primary-color);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#home"><i class="fas fa-home"></i> 首页</a>
+        <a href="#gallery"><i class="fas fa-images"></i> 画廊</a>
+        <a href="#blog"><i class="fas fa-blog"></i> 博客</a>
+        <a href="#ai-chat"><i class="fas fa-robot"></i> AI聊天</a>
+    </nav>
+
+    <header id="home">
+        <div class="hero-carousel">
+            <div class="hero-slide active" style="background-image: url('images/photo1.jpg');" data-src="images/photo1.jpg">
+                <div class="hero-content">
+                    <h1>欢迎来到我的二次元世界</h1>
+                    <p>分享、交流、创造</p>
+                </div>
+            </div>
+            <div class="hero-slide" style="background-image: url('images/photo2.jpg');" data-src="images/photo2.jpg">
+                <div class="hero-content">
+                    <h1>探索动漫的魅力</h1>
+                    <p>感受艺术的力量</p>
+                </div>
+            </div>
+            <div class="hero-slide" style="background-image: url('images/photo3.jpg');" data-src="images/photo3.jpg">
+                <div class="hero-content">
+                    <h1>二次元与现实的交织</h1>
+                    <p>创造无限可能</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-nav">
+            <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+            <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section id="gallery">
+            <h2>二次元画廊</h2>
+            <div class="gallery-grid">
+                <div class="gallery-card">
+                    <img src="images/jujutsu-kaisen.jpg" alt="咒术回战">
+                    <div class="gallery-card-content">
+                        <h3>咒术回战 第二季</h3>
+                        <p>五条悟的过去与咒术界的动荡，引人入胜的剧情发展。</p>
+                        <div class="gallery-card-actions">
+                            <button class="like-btn" data-id="1"><i class="far fa-heart"></i> <span class="like-count">0</span></button>
+                            <button class="favorite-btn" data-id="1"><i class="far fa-star"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <img src="images/demon-slayer.jpg" alt="鬼灭之刃">
+                    <div class="gallery-card-content">
+                        <h3>鬼灭之刃 刀匠村篇</h3>
+                        <p>炭治郎一行人的新冒险，锻造最强之刃的故事。</p>
+                        <div class="gallery-card-actions">
+                            <button class="like-btn" data-id="2"><i class="far fa-heart"></i> <span class="like-count">0</span></button>
+                            <button class="favorite-btn" data-id="2"><i class="far fa-star"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <img src="images/spy-family.jpg" alt="间谍过家家">
+                    <div class="gallery-card-content">
+                        <h3>间谍过家家 第二季</h3>
+                        <p>阿尼亚的成长与福杰家庭的爆笑日常。</p>
+                        <div class="gallery-card-actions">
+                            <button class="like-btn" data-id="3"><i class="far fa-heart"></i> <span class="like-count">0</span></button>
+                            <button class="favorite-btn" data-id="3"><i class="far fa-star"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <img src="images/frieren.jpg" alt="葬送的芙莉莲">
+                    <div class="gallery-card-content">
+                        <h3>葬送的芙莉莲</h3>
+                        <p>精灵魔法师芙莉莲的漫长旅程，探讨生命与时间的意义。</p>
+                        <div class="gallery-card-actions">
+                            <button class="like-btn" data-id="4"><i class="far fa-heart"></i> <span class="like-count">0</span></button>
+                            <button class="favorite-btn" data-id="4"><i class="far fa-star"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <img src="images/solo-leveling.jpg" alt="独立游戏">
+                    <div class="gallery-card-content">
+                        <h3>独立游戏</h3>
+                        <p>弱小猎人成长为最强者的热血冒险故事。</p>
+                        <div class="gallery-card-actions">
+                            <button class="like-btn" data-id="5"><i class="far fa-heart"></i> <span class="like-count">0</span></button>
+                            <button class="favorite-btn" data-id="5"><i class="far fa-star"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <img src="images/oshi-no-ko.jpg" alt="【推しの子】">
+                    <div class="gallery-card-content">
+                        <h3>【推しの子】</h3>
+                        <p>偶像产业的黑暗面与复仇的故事，引发热议。</p>
+                        <div class="gallery-card-actions">
+                            <button class="like-btn" data-id="6"><i class="far fa-heart"></i> <span class="like-count">0</span></button>
+                            <button class="favorite-btn" data-id="6"><i class="far fa-star"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog">
+            <h2>二次元博客</h2>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <img src="images/blog1.jpg" alt="最新动漫推荐">
+                    <div class="blog-card-content">
+                        <h3>2024年必看动漫TOP5</h3>
+                        <p>从《咒术回战》第二季到《葬送的芙莉莲》，2024年的动漫作品精彩纷呈。本文为您精选了五部不容错过的神作...</p>
+                        <a href="https://www.freeok.vip/v-type/3.html" class="btn" target="_blank">了解更多</a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <img src="images/blog2.jpg" alt="动漫角色分析">
+                    <div class="blog-card-content">
+                        <h3>《进击的巨人》角色深度解析</h3>
+                        <p>艾伦·耶格尔的人物塑造堪称现代动漫的经典。本文将深入探讨他的性格发展和内心矛盾...</p>
+                        <a href="https://www.freeok.vip/v-type/3.html" class="btn" target="_blank">了解更多</a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <img src="images/blog3.jpg" alt="动漫制作解密">
+                    <div class="blog-card-content">
+                        <h3>动画制作的幕后故事</h3>
+                        <p>从分镜到配音，动画的制作过程充满魅力。本文将带您一窥业界大师们的工作流程和创作理念...</p>
+                        <a href="https://www.freeok.vip/v-type/3.html" class="btn" target="_blank">了解更多</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="ai-chat" class="ai-chat-section">
+            <h2>AI 二次元助手</h2>
+            <div class="chat-container">
+                <div class="chat-messages" id="chat-messages"></div>
+                <div class="chat-input">
+                    <input type="text" id="user-input" placeholder="输入消息...">
+                    <button id="send-button">发送</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 我的二次元世界. 保留所有权利。</p>
+        <div class="social-links">
+            <a href="#" id="qq-link" title="QQ"><i class="fab fa-qq"></i></a>
+            <a href="https://space.bilibili.com/1089143284?spm_id_from=333.1007.0.0" target="_blank" title="Bilibili" class="bilibili-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773zM8 11.107c.373 0 .684.124 .933.373 .25.249 .383.569 .4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124 .933.373 .25.249 .383.569 .4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373Z"/>
+                </svg>
+            </a>
+            <a href="https://github.com/user1jj" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/ai-chat.js"></script>
+</body>
+</html>
