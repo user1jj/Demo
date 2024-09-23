@@ -1,0 +1,46 @@
+.qr-code-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  z-index: 9999;
+  background-color: red !important;
+  width: 300px !important;
+  height: 300px !important;
+}
+
+.qr-code-modal img {
+  max-width: 200px;
+  height: auto;
+}
+
+.qq-container {
+  position: relative;
+  display: inline-block;
+  z-index: 1000;
+}
+
+.qq-icon {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+.qq-qrcode {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 200px;
+  height: auto;
+  z-index: 1001;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  display: block;
+}
